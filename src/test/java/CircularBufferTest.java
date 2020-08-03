@@ -18,7 +18,7 @@ public class CircularBufferTest {
             cb.writeData("A" + 1);
         }
         boolean result = cb.isFull();
-        assertTrue("Buffer is Full", result);
+        assertTrue("Buffer is not Full", result);
     }
 
     @Test
@@ -30,4 +30,10 @@ public class CircularBufferTest {
         assertEquals("B",cb.readData());
     }
 
+    @Test
+    public  void is_buffer_still_have_space_to_write(){
+        CircularBuffer cb = new CircularBuffer();
+        boolean result = cb.isBufferHaveSpace();
+        assertTrue("Buffer Does not have space left", result);
+    }
 }

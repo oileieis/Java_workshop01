@@ -27,4 +27,8 @@ public class CircularBuffer {
     public String readData() {
         return this.buffer[readPointer++];
     }
+
+    public boolean isBufferHaveSpace() {
+        return bufferSize > 0;
+    }
 }
