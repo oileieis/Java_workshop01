@@ -44,4 +44,10 @@ public class CircularBufferTest {
         boolean result = cb.isReSize();
         assertTrue("Size not change",result);
     }
+
+    @Test
+    public void read_before_write_should_return_null() {
+        CircularBuffer cb = new CircularBuffer();
+        assertNull("got some data", cb.readData());
+    }
 }
