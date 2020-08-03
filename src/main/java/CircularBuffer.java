@@ -31,4 +31,12 @@ public class CircularBuffer {
     public boolean isBufferHaveSpace() {
         return bufferSize > 0;
     }
+
+    public void setSize(int i) {
+        this.buffer = new String[i];
+    }
+
+    public boolean isReSize() {
+        return this.buffer.length != 10;
+    }
 }

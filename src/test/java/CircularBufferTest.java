@@ -36,4 +36,12 @@ public class CircularBufferTest {
         boolean result = cb.isBufferHaveSpace();
         assertTrue("Buffer Does not have space left", result);
     }
+
+    @Test
+    public void set_size_to_20(){
+        CircularBuffer cb = new CircularBuffer();
+        cb.setSize(20);
+        boolean result = cb.isReSize();
+        assertTrue("Size not change",result);
+    }
 }
