@@ -50,4 +50,5 @@ public class CircularBufferTest {
         CircularBuffer cb = new CircularBuffer();
         assertNull("got some data", cb.readData());
     }
+
 }
