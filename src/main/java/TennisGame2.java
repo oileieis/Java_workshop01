@@ -48,10 +48,10 @@ public class TennisGame2
 
         }
 
-        if (p1Point == p2Point && p1Point >=3)
+        if (p1Point == p2Point && p1Point >=3) {
 
             score = "Deuce";
-
+        }
 
 
         if (p1Point > 0 && p2Point ==0)

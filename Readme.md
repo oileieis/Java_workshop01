@@ -16,5 +16,6 @@
 * TC01 => is_buffer_still_have_space_to_write()
 * TC02 => set_size_to_20()
 * TC03 => read_before_write_should_return_null()
-* TC04 => 1 commit
-* TC05 => 1 commit
+
+### List of refactor
+* 
