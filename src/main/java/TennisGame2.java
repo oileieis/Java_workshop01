@@ -54,38 +54,8 @@ public class TennisGame2 {
         if (player1Point == player2Point && player1Point >=3)
             return "Deuce";
 
-        if (player1Point > 0 && player2Point ==0)
-        {
-
-            player1Result = textScore(player1Point);
-            player2Result = "Love";
-            score = player1Result + "-" + player2Result;
-            return score;
-        }
-        if (player2Point > 0 && player1Point ==0)
-        {
-            player2Result = textScore(player2Point);
-            player1Result = "Love";
-            score = player1Result + "-" + player2Result;
-            return score;
-        }
-
-        if (player1Point > player2Point && player1Point < 4)
-        {
-            player1Result = textScore(player1Point);
-            player2Result = textScore(player2Point);
-            score = player1Result + "-" + player2Result;
-            return score;
-        }
-        if (player2Point > player1Point && player2Point < 4)
-        {
-            player1Result = textScore(player1Point);
-            player2Result = textScore(player2Point);
-            score = player1Result + "-" + player2Result;
-            return score;
-        }
-
-        return score;
+        //Normal case
+        return textScore(player1Point) + "-" + textScore(player2Point);
     }
 
 
