@@ -1,9 +1,7 @@
 public class TennisGame2 {
-    private int player1Point = 0;
-    private int player2Point = 0;
+    private int player1Point;
+    private int player2Point;
 
-    //    private String P1res = "";
-//    private String P2res = "";
     private final String player1Name;
     private final String player2Name;
 
@@ -29,13 +27,32 @@ public class TennisGame2 {
         String player1Result = "";
         String player2Result = "";
         String score = "";
-        if (player1Point == player2Point && player1Point < 4)
+
+        if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2)
+        {
+            return "Win for "+ player1Name;
+        }
+        if (player2Point >=4 && player1Point >=0 && (player2Point - player1Point)>=2)
+        {
+            return "Win for "+ player2Name;
+        }
+        if (player1Point > player2Point && player2Point >= 3 )
+        {
+            return "Advantage " + player1Name;
+        }
+
+        if (player2Point > player1Point && player1Point >= 3)
+        {
+            return "Advantage " + player2Name;
+        }
+        if (player1Point == player2Point && player1Point < 3)
         {
             score = textScore(player1Point);
             score += "-All";
+            return score;
         }
         if (player1Point == player2Point && player1Point >=3)
-            score = "Deuce";
+            return "Deuce";
 
         if (player1Point > 0 && player2Point ==0)
         {
@@ -43,12 +60,14 @@ public class TennisGame2 {
             player1Result = textScore(player1Point);
             player2Result = "Love";
             score = player1Result + "-" + player2Result;
+            return score;
         }
         if (player2Point > 0 && player1Point ==0)
         {
             player2Result = textScore(player2Point);
             player1Result = "Love";
             score = player1Result + "-" + player2Result;
+            return score;
         }
 
         if (player1Point > player2Point && player1Point < 4)
@@ -56,32 +75,16 @@ public class TennisGame2 {
             player1Result = textScore(player1Point);
             player2Result = textScore(player2Point);
             score = player1Result + "-" + player2Result;
+            return score;
         }
         if (player2Point > player1Point && player2Point < 4)
         {
             player1Result = textScore(player1Point);
             player2Result = textScore(player2Point);
             score = player1Result + "-" + player2Result;
+            return score;
         }
 
-        if (player1Point > player2Point && player2Point >= 3)
-        {
-            score = "Advantage player1";
-        }
-
-        if (player2Point > player1Point && player1Point >= 3)
-        {
-            score = "Advantage player2";
-        }
-
-        if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2)
-        {
-            score = "Win for player1";
-        }
-        if (player2Point >=4 && player1Point >=0 && (player2Point - player1Point)>=2)
-        {
-            score = "Win for player2";
-        }
         return score;
     }
 
