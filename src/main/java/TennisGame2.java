@@ -28,6 +28,7 @@ public class TennisGame2 {
         String player2Result = "";
         String score = "";
 
+        //win condition
         if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2)
         {
             return "Win for "+ player1Name;
@@ -36,6 +37,8 @@ public class TennisGame2 {
         {
             return "Win for "+ player2Name;
         }
+
+        //Advantage after deuce
         if (player1Point > player2Point && player2Point >= 3 )
         {
             return "Advantage " + player1Name;
@@ -45,12 +48,14 @@ public class TennisGame2 {
         {
             return "Advantage " + player2Name;
         }
+
+        // Same score but not deuce
         if (player1Point == player2Point && player1Point < 3)
         {
-            score = textScore(player1Point);
-            score += "-All";
-            return score;
+            return textScore(player1Point) + "-All";
         }
+
+        // Same score
         if (player1Point == player2Point && player1Point >=3)
             return "Deuce";
 
