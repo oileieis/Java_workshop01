@@ -48,10 +48,10 @@ public class TennisGame2
 
         }
 
-        if (p1Point == p2Point && p1Point >=3) {
+        if (p1Point == p2Point && p1Point >=3)
 
             score = "Deuce";
-        }
+
 
 
         if (p1Point > 0 && p2Point ==0)
@@ -158,7 +158,7 @@ public class TennisGame2
 
         {
 
-            score = "Advantage player1";
+            score = "Advantage " + player1Name;
 
         }
 
@@ -168,7 +168,7 @@ public class TennisGame2
 
         {
 
-            score = "Advantage player2";
+            score = "Advantage " + player2Name;
 
         }
 
@@ -178,7 +178,7 @@ public class TennisGame2
 
         {
 
-            score = "Win for player1";
+            score = "Win for " + player1Name;
 
         }
 
@@ -186,7 +186,7 @@ public class TennisGame2
 
         {
 
-            score = "Win for player2";
+            score = "Win for " + player2Name;
 
         }
 
